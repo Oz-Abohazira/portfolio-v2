@@ -164,6 +164,22 @@ export const infoList = [
 
 export const toolsData = [
   {
+    icon: assets.mongodb,
+    description: "Favorite NoSQL database for most full-stack apps.",
+  },
+  {
+    icon: assets.express,
+    description: "My go-to framework for building RESTful APIs.",
+  },
+  {
+    icon: assets.react,
+    description: "I enjoy building fast, interactive UIs with React.",
+  },
+  {
+    icon: assets.node,
+    description: "Using Node.js for backend logic and APIs.",
+  },  
+  {
     icon: assets.vscode,
     description: "My everyday editor for writing and debugging code.",
   },
@@ -171,22 +187,6 @@ export const toolsData = [
   //   icon: assets.firebase,
   //   description: "Used for simple backends and real-time features.",
   // },
-  {
-    icon: assets.react,
-    description: "I enjoy building fast, interactive UIs with React.",
-  },
-  {
-    icon: assets.node,
-    description: "Used Node.js for backend logic and APIs.",
-  },
-  {
-    icon: assets.express,
-    description: "My go-to framework for building RESTful APIs.",
-  },
-  {
-    icon: assets.mongodb,
-    description: "Favorite NoSQL database for most full-stack apps.",
-  },
   {
     icon: angular,
     description: "Built structured, scalable apps using Angular.",

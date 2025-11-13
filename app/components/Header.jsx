@@ -6,9 +6,12 @@ const Header = () => {
     return (
         <div>
             <div className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4'>
+                <div className='mt-10 w-64 rounded-full md:hidden'>
+                    <Image src={assets.small_profile_img} alt="" className='w-full rounded-3xl' />
+                </div>
                 <h3 className='flex items-end gap-2 text-xl md:text-2xl mb-3 font-outfit'>
                     Hi ! I am Oz Abohazira
-                    <Image src={assets.hand_icon} alt="my-image" className='w-6' />
+                    {/* <Image src={assets.hand_icon} alt="my-image" className='w-6' /> */}
                 </h3>
                 <h1 className='text-3xl sm:text-6xl lg:text-[66px] font-outfit'>Full Stack Developer Based in Dunwoody, GA</h1>
                 <p>With 8 years of hands-on experience in SAP Full Stack technologies,
@@ -26,7 +29,7 @@ const Header = () => {
             </div>
 
             {/* ---- My Image ---- */}
-            <div className="absolute inset-0 -z-10 overflow-hidden opacity-80">
+            <div className="hidden md:block absolute inset-0 -z-10 overflow-hidden opacity-80">
                 <Image src={assets.profile_img} alt="my-image" className='scale-90' />
             </div>
 

@@ -12,11 +12,11 @@ const Skills = () => {
             <h2 className='text-center text-5xl font-ovo'>Main Skills</h2>
 
             <div className='flex w-full flex-col lg:flex-row items-center gap-20 my-20'>
-                <div className='w-64 sm:w-80 rounded-3xl max-w-none '>
+                <div className='hidden md:block w-64 sm:w-80 rounded-3xl max-w-none '>
                     <Image src={assets.small_profile_img} alt="" className='w-full rounded-3xl' />
                 </div>
                 <div className='flex-1'>
-                    <p className='mb-10 max-w-2xl'>Frontend-focused software developer with over 9 years of experience, specializing
+                    <p className='hidden md:block mb-10 max-w-2xl'>Frontend-focused software developer with over 9 years of experience, specializing
                         in modern web technologies, including Angular, React, TypeScript, Tailwind and
                         component-based architecture. Proven track record in building responsive
                         applications with comprehensive testing strategies and AI-assisted development
@@ -37,7 +37,9 @@ const Skills = () => {
             </div>
 
             <div className="relative overflow-hidden w-full group">
-                <ul className="grid grid-flow-col auto-cols-[9rem] gap-5">
+                <h2 className='text-center mb-10 text-3xl font-ovo'>Some Of My Favorite Tools</h2>
+
+                <ul className="grid grid-cols-2 sm:grid-cols-3 xl:grid-flow-col auto-cols-[9rem] gap-5">
                     {toolsData.map((item, index) => (
                         <li
                             key={index}
@@ -53,7 +55,8 @@ const Skills = () => {
                                 alt="tool Image"
                                 className="w-6 sm:w-12 lg:w-17 mx-auto"
                             />
-                            <p className={`text-center mt-2 text-sm transition-all duration-300 ${hoveredIndex === index ? 'opacity-100 max-h-20' : 'opacity-0 max-h-0 overflow-hidden'
+                            <p className={`font-semibold text-gray-600 text-xs font-outfit text-center my-2 transition-all duration-300 
+                                           ${hoveredIndex === index ? 'opacity-100 max-h-20' : 'opacity-0 max-h-0 overflow-hidden'
                                 }`}>
                                 {item.description}
                             </p>
