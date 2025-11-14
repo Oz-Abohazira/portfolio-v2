@@ -25,7 +25,6 @@ const Navbar = () => {
                             ${!isScrolled && 'bg-white/50 shadow-2xs'}`}>
                     <li><a className='font-ovo' href="#top">Home</a></li>
                     <li><a className='font-ovo font-medium' href="#work">My Work</a></li>
-                    <li><a className='font-ovo' href="#services">Services</a></li>
                     <li><a className='font-ovo' href="#skills">Skills</a></li>
                     <li><a className='font-ovo' href="#contact">Contact Me</a></li>
                 </ul>
@@ -53,7 +52,6 @@ const Navbar = () => {
 
                     <li><a onClick={() => setIsShowMenu(false)} className='font-ovo' href="#top">Home</a></li>
                     <li><a onClick={() => setIsShowMenu(false)} className='font-ovo font-medium' href="#work">My Work</a></li>
-                    <li><a onClick={() => setIsShowMenu(false)} className='font-ovo' href="#services">Services</a></li>
                     <li><a onClick={() => setIsShowMenu(false)} className='font-ovo' href="#skills">Skills</a></li>
                     <li><a onClick={() => setIsShowMenu(false)} className='font-ovo' href="#contact">Contact Me</a></li>
                 </ul>

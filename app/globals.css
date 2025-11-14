@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
 * {
-  /* font-family: Ovo; */
   box-sizing: border-box;
 }
 
@@ -14,9 +13,14 @@
   --color-darkTheme: #11001f;
 
   --shadow-black: 4px 4px 0 #000;
+  --shadow-black-sm: 1px 1px 0 #000;
   --shadow-white: 4px 4px 0 #fff;
 
   --animate-scroll: scroll 20s linear infinite;
+}
+
+@utility grid-cols-auto {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
 }
 
 @keyframes scroll {

@@ -17,6 +17,7 @@ import angular from "./angular.png";
 import right_arrow_white from "./right-arrow-white.png";
 import logo from "./logo.png";
 import logo_dark from "./logo_dark.png";
+import github from "./github.png"
 import mail_icon from "./mail_icon.png";
 import mail_icon_dark from "./mail_icon_dark.png";
 import profile_img from "./profile-img.png";
@@ -58,6 +59,7 @@ export const assets = {
   angular,
   express,
   react,
+  github,
   right_arrow_white,
   logo,
   logo_dark,
@@ -88,24 +90,55 @@ export const assets = {
 
 export const workData = [
   {
-    title: "Frontend project",
-    description: "Web Design",
-    bgImage: "/work-1.png",
-  },
-  {
-    title: "Geo based app",
-    description: "Mobile App",
-    bgImage: "/work-2.png",
+    title: "Hair Salon Management System",
+    githubLink: "https://github.com/Oz-Abohazira/SalonIQ",
+    features: [
+      "Online Payment Integration",
+      "Slot Scheduling",
+      "User Management",
+      "JWT",
+      "Password Encryption",
+      "Admin Management Panel",
+    ],
+    projectItems: [
+      {
+        title: "Front End",
+        description: "View Live Site",
+        bgImage: "/front-salon.png",
+        link: "https://salon-iq-user.vercel.app/",
+      },
+      {
+        title: "Admin Panel",
+        description: "View Live Site",
+        bgImage: "/salon-admin-panel.png",
+        link: "https://salon-iq-admin.vercel.app/dashboard",
+      },
+    ],
   },
   {
     title: "Photography site",
-    description: "Web Design",
-    bgImage: "/work-3.png",
-  },
-  {
-    title: "UI/UX designing",
-    description: "UI/UX Design",
-    bgImage: "/work-4.png",
+    githubLink: "",
+    features: [
+      "Slot Scheduling",
+      "User Management",
+      "JWT",
+      "Password Encryption",
+    ],
+
+    projectItems: [
+      {
+        title: "Admin Panel",
+        description: "View Live Site",
+        bgImage: "/work-4.png",
+        link: "https://salon-iq-admin.vercel.app/dashboard",
+      },
+      {
+        title: "Admin Panel",
+        description: "View Live Site",
+        bgImage: "/work-4.png",
+        link: "https://salon-iq-admin.vercel.app/dashboard",
+      },
+    ],
   },
 ];
 
@@ -178,7 +211,7 @@ export const toolsData = [
   {
     icon: assets.node,
     description: "Using Node.js for backend logic and APIs.",
-  },  
+  },
   {
     icon: assets.vscode,
     description: "My everyday editor for writing and debugging code.",

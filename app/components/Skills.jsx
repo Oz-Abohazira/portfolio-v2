@@ -37,7 +37,7 @@ const Skills = () => {
             </div>
 
             <div className="relative overflow-hidden w-full group">
-                <h2 className='text-center mb-10 text-3xl font-ovo'>Some Of My Favorite Tools</h2>
+                <h2 className='text-center mb-10 text-3xl font-ovo'>Some Of My Preferred Tools</h2>
 
                 <ul className="grid grid-cols-2 sm:grid-cols-3 xl:grid-flow-col auto-cols-[9rem] gap-5">
                     {toolsData.map((item, index) => (
