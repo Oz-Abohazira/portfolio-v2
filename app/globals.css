@@ -20,8 +20,10 @@
 }
 
 @utility grid-cols-auto {
-  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
+
+@custom-variant dark (&:where(.dark &));
 
 @keyframes scroll {
   0% {

@@ -18,6 +18,7 @@ import right_arrow_white from "./right-arrow-white.png";
 import logo from "./logo.png";
 import logo_dark from "./logo_dark.png";
 import github from "./github.png"
+import github_dark from "./github_dark.png"
 import mail_icon from "./mail_icon.png";
 import mail_icon_dark from "./mail_icon_dark.png";
 import profile_img from "./profile-img.png";
@@ -60,6 +61,7 @@ export const assets = {
   express,
   react,
   github,
+  github_dark,
   right_arrow_white,
   logo,
   logo_dark,
@@ -113,31 +115,12 @@ export const workData = [
         bgImage: "/salon-admin-panel.png",
         link: "https://salon-iq-admin.vercel.app/dashboard",
       },
-    ],
-  },
-  {
-    title: "Photography site",
-    githubLink: "",
-    features: [
-      "Slot Scheduling",
-      "User Management",
-      "JWT",
-      "Password Encryption",
-    ],
-
-    projectItems: [
       {
-        title: "Admin Panel",
-        description: "View Live Site",
-        bgImage: "/work-4.png",
-        link: "https://salon-iq-admin.vercel.app/dashboard",
+        bgImage: "/front-book.png",
       },
       {
-        title: "Admin Panel",
-        description: "View Live Site",
-        bgImage: "/work-4.png",
-        link: "https://salon-iq-admin.vercel.app/dashboard",
-      },
+        bgImage: "/front-about.png",
+      }
     ],
   },
 ];
