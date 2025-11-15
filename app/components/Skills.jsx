@@ -47,11 +47,11 @@ const Skills = ({ isDarkMode }) => {
 
                 <motion.ul variants={shrinkIn}
                     initial="hidden"
-                    whileInView="visible" viewport={{ amount: 0.2 }} className="grid grid-cols-2 sm:grid-cols-3 xl:grid-flow-col auto-cols-[9rem] gap-5">
+                    whileInView="visible" viewport={{ amount: 0.2 }} className="grid xs:grid-cols-2 sm:grid-cols-3 xl:grid-cols-none xl:grid-flow-col gap-5">
                     {toolsData.map((item, index) => (
                         <li
                             key={index}
-                            className={`p-6 cursor-pointer rounded-xl hover:bg-lightHover dark:hover:bg-darkHover/50 shrink-0 border border-gray-400
+                            className={`p-6 cursor-pointer rounded-xl hover:bg-lightHover dark:hover:bg-darkHover/50 border border-gray-400
                                        flex flex-col justify-between transition-all duration-500 
                                        ${hoveredIndex !== null && hoveredIndex !== index ? 'blur-sm opacity-50' : ''
                                 }`}
