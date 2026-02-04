@@ -25,8 +25,7 @@ const Header = () => {
                     custom={0.3}
                     initial="hidden"
                     whileInView="visible"
-                >
-                    Hi! I am Oz Abohazira
+                >Hi! I am Oz Abohazira
                 </motion.h3>
 
                 <motion.h1 className="text-3xl sm:text-6xl lg:text-[66px] font-outfit"
@@ -34,16 +33,16 @@ const Header = () => {
                     custom={0.5}
                     initial="hidden"
                     whileInView="visible"
-                >Full Stack Developer Based in Dunwoody, GA
+                >Software Engineer Based in Dunwoody, GA
                 </motion.h1>
 
                 <motion.p variants={fadeUp}
                     custom={0.7}
                     initial="hidden"
                     whileInView="visible"
-                >With 8 years of hands-on experience in SAP Full Stack technologies, and a year in Front End,
-                    I am now expanding my expertise into the MERN stack to build modern,
-                    scalable web applications.
+                >With 9+ years of hands-on experience in Enterprise App and Software Engineering,
+                    I build scalable, high-impact systems across enterprise platforms and modern web stacks — 
+                    from mission-critical applications to modern SaaS products.
                 </motion.p>
                 <motion.div className="flex flex-col sm:flex-row items-center gap-4 mt-4"
                     variants={fadeIn}
