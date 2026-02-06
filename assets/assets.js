@@ -17,8 +17,8 @@ import angular from "./angular.png";
 import right_arrow_white from "./right-arrow-white.png";
 import logo from "./logo.png";
 import logo_dark from "./logo_dark.png";
-import github from "./github.png"
-import github_dark from "./github_dark.png"
+import github from "./github.png";
+import github_dark from "./github_dark.png";
 import mail_icon from "./mail_icon.png";
 import mail_icon_dark from "./mail_icon_dark.png";
 import profile_img from "./profile-img.png";
@@ -92,6 +92,39 @@ export const assets = {
 
 export const workData = [
   {
+    title: "CityPulse - Georgia Neighborhood Intelligence",
+    githubLink: "https://github.com/Oz-Abohazira/CityPulse",
+    features: [
+      "AI-Powered Neighborhood Analysis",
+      "Real-Time POI Data from Multiple Sources",
+      "Interactive Map Visualization",
+      "Safety Score from FBI Crime Data",
+      "Walkability & Transit Scoring",
+      "Smart Search with Intent Detection",
+      "Data Caching & Optimization",
+    ],
+    projectItems: [
+      {
+        title: "Live Application",
+        description: "View Live Site",
+        bgImage: "/citypulse-home.png",
+        link: "https://citypulse-vet.vercel.app/",
+      },
+      {
+        title: "Analysis Dashboard",
+        description: "Neighborhood Insights",
+        bgImage: "/citypulse-results.png",
+        link: "https://citypulse-vet.vercel.app/pulse?lat=33.9528472&lng=-84.5496148&address=Marietta%2C%20Cobb%20County%2C%20Georgia%2C%20United%20States",
+      },
+      {
+        bgImage: "/citypulse-map.png",
+      },
+      {
+        bgImage: "/citypulse-crime.png",
+      },
+    ],
+  },
+  {
     title: "Hair Salon Management System",
     githubLink: "https://github.com/Oz-Abohazira/SalonIQ",
     features: [
@@ -120,7 +153,7 @@ export const workData = [
       },
       {
         bgImage: "/front-about.png",
-      }
+      },
     ],
   },
 ];

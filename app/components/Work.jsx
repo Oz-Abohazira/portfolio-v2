@@ -1,10 +1,12 @@
 import { assets, workData } from '@/assets/assets'
 import Image from 'next/image'
-import React from 'react'
-import { motion } from "motion/react"
+import React, { useState } from 'react'
+import { motion, AnimatePresence } from "motion/react"
 import { scaleIn, fadeUp } from "../utils/animations";
 
 const Work = ({ isDarkMode }) => {
+    const [selectedImage, setSelectedImage] = useState(null);
+
     return (
         <div id="work" className='w-full px-[12%] py-10 scroll-mt-20'>
             <motion.h2 variants={fadeUp}
@@ -49,15 +51,16 @@ const Work = ({ isDarkMode }) => {
                         {/* Mapping Each Project Item */}
                         {project.projectItems.map((projectItem, innerIndex) => (
                             <div key={innerIndex}>
-                                <div onClick={() => projectItem.link && window.open(projectItem.link, '_blank')}
-                                    className={`aspect-square bg-no-repeat bg-cover bg-center rounded-xl relative cursor-pointer group
+                                <div onClick={() => setSelectedImage(projectItem.bgImage)}
+                                    className={`aspect-square bg-no-repeat bg-cover bg-center rounded-xl relative cursor-zoom-in group
                                                             ${!projectItem.link && 'hidden md:block'}`}
                                     style={{ backgroundImage: `url(${projectItem.bgImage})` }}>
                                     {
                                         projectItem.link &&
-                                        <div className='bg-gray-200/90 w-10/12 rounded-lg absolute bottom-5 left-1/2 
+                                        <div onClick={(e) => { e.stopPropagation(); window.open(projectItem.link, '_blank'); }}
+                                            className='bg-gray-200/90 w-10/12 rounded-lg absolute bottom-5 left-1/2 
                                          -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500
-                                         group-hover:bottom-7'>
+                                         group-hover:bottom-7 cursor-pointer'>
                                             <div>
                                                 <h2 className='font-semibold'>{projectItem.title}</h2>
                                                 <p className='text-sm text-gray-700'>{projectItem.description}</p>
@@ -76,6 +79,36 @@ const Work = ({ isDarkMode }) => {
                 </motion.div>
             ))
             }
+
+            {/* Lightbox Modal */}
+            <AnimatePresence>
+                {selectedImage && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={() => setSelectedImage(null)}
+                        className='fixed inset-0 bg-black/80 z-50 flex items-center justify-center cursor-zoom-out p-4'
+                    >
+                        <motion.img
+                            initial={{ scale: 0.8, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.8, opacity: 0 }}
+                            transition={{ type: "spring", damping: 25, stiffness: 300 }}
+                            src={selectedImage}
+                            alt="Enlarged project preview"
+                            className='max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl'
+                            onClick={(e) => e.stopPropagation()}
+                        />
+                        <button
+                            onClick={() => setSelectedImage(null)}
+                            className='absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition-colors'
+                        >
+                            &times;
+                        </button>
+                    </motion.div>
+                )}
+            </AnimatePresence>
 
         </div >
     )
